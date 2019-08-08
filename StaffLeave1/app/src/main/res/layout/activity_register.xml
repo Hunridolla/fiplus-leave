@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context="com.example.hunridolla.staffleave1.register">
+
+    <ImageView
+        android:id="@+id/top_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/fiplus_khmer" />
+
+    <TextView
+        android:id="@+id/lbl_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_img"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Username"
+        android:textColor="#EB9D12"
+        android:textSize="8pt"/>
+
+    <EditText
+        android:id="@+id/txtUsername"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_username"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:background="@drawable/txtrounded"/>
+    <TextView
+        android:id="@+id/lbl_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtUsername"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Password"
+        android:textColor="#EB9D12"
+        android:textSize="8pt"/>
+
+    <EditText
+        android:id="@+id/txtPwd"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_pwd"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:background="@drawable/txtrounded"/>
+    <TextView
+        android:id="@+id/lbl_confirmPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPwd"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Confirm Password"
+        android:textColor="#EB9D12"
+        android:textSize="8pt"/>
+
+    <EditText
+        android:id="@+id/txtConfirmPwd"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_confirmPwd"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:background="@drawable/txtrounded"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtConfirmPwd"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:minWidth="120dp"
+        android:backgroundTint="#EB9D12"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:text="SAVE"/>
+
+</RelativeLayout>

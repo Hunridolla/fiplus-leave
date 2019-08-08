@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_staff_info"
+            android:icon="@drawable/application"
+            android:title="Staff Information" />
+        <item
+            android:id="@+id/nav_staff_request"
+            android:icon="@drawable/pending"
+            android:title="Staff Request" />
+        <item
+            android:id="@+id/nav_staff_approve"
+            android:icon="@drawable/verified_symbol"
+            android:title="Staff Approve" />
+        <item
+        android:id="@+id/nav_staff_bal"
+        android:icon="@drawable/hand"
+        android:title="Staff Balance" />
+        <item
+            android:id="@+id/nav_staff_reports"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="Staff Reports" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/settings"
+            android:title="Settings" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/nav_register"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Register" />
+        <item
+            android:id="@+id/nav_sign_out"
+            android:icon="@drawable/ic_open_in_new_black_24dp"
+            android:title="@string/menu_sign_out" />
+    </group>
+
+</menu>

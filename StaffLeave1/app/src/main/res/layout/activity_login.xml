@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login"
+    android:background="#FFF">
+
+    <ImageView
+        android:id="@+id/img_fiplus"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/fiplus_khmer" />
+
+    <TextView
+        android:id="@+id/lbl_fiplus_khmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_fiplus"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/moulregular"
+        android:text="@string/fiplus_khmer"
+        android:textColor="#FBB205"
+        android:textStyle="bold"
+        android:textSize="18dp"/>
+    <TextView
+        android:id="@+id/lbl_fiplus_english"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_fiplus_khmer"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/fiplus_english"
+        android:textColor="#FBB205"
+        android:textStyle="bold"
+        android:textSize="18dp"/>
+
+    <ImageView
+        android:id="@+id/img_user"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/lbl_fiplus_english"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/user" />
+
+    <TextView
+        android:id="@+id/lbl_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_user"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Username"
+        android:textColor="#EB9D12"
+        android:textSize="8pt"/>
+
+    <EditText
+        android:id="@+id/txtUsername"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_username"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:background="@drawable/txtrounded"/>
+    <TextView
+        android:id="@+id/lbl_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtUsername"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Password"
+        android:textColor="#EB9D12"
+        android:textSize="8pt"/>
+
+    <EditText
+        android:id="@+id/txtPwd"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_pwd"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:background="@drawable/txtrounded"/>
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtPwd"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:minWidth="120dp"
+        android:backgroundTint="#EB9D12"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:text="SIGN IN"/>
+    <TextView
+        android:id="@+id/tbl_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSignIn"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:text="@string/register_here"
+        android:textColor="#EB9D12"/>
+</RelativeLayout>
