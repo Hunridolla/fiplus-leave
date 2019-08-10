@@ -1,11 +1,16 @@
 package com.example.hunridolla.staffleave1;
 
 import android.content.Context;
+import android.support.v7.widget.PopupMenu;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -36,13 +41,14 @@ public class StaffRequestAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(int i, View view, final ViewGroup viewGroup) {
         View v = inflater.inflate(R.layout.staff_request_list_view, null);
-        TextView lbl_staff_name = v.findViewById(R.id.lbl_staff_name);
+        final TextView lbl_staff_name = v.findViewById(R.id.lbl_staff_name);
         TextView lbl_num_day_leave = v.findViewById(R.id.lbl_num_day_leave);
         TextView lbl_leave_period = v.findViewById(R.id.lbl_leave_period);
         TextView lbl_leave_hour = v.findViewById(R.id.lbl_leave_hour);
-        TextView lbl_booking_time = v.findViewById(R.id.lbl_booking_time);
+        final TextView lbl_booking_time = v.findViewById(R.id.lbl_booking_time);
+        ImageView img_more = v.findViewById(R.id.more);
 
         StaffRequestModel staffRequestModel = staffRequestModels.get(i);
         lbl_staff_name.setText(staffRequestModel.getStaff_name());
@@ -51,6 +57,39 @@ public class StaffRequestAdapter extends BaseAdapter {
         lbl_leave_hour.setText(staffRequestModel.getLeave_hour());
         lbl_booking_time.setText(staffRequestModel.getBooking_time());
 
+        img_more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenu popup = new PopupMenu(context, view);
+                MenuInflater inflater = popup.getMenuInflater();
+                inflater.inflate(R.menu.staff_request_content_menu, popup.getMenu());
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    public boolean onMenuItemClick(MenuItem item) {
+                        int i = item.getItemId();
+                        if (i == R.id.ct_approve) {
+                            message(lbl_staff_name.getText().toString());
+                            return true;
+                        }
+                        else if (i == R.id.ct_reject){
+                            message(lbl_booking_time.getText().toString());
+                            return true;
+                        }
+                        else if (i == R.id.ct_cancel) {
+                            return false;
+                        }
+                        else {
+                            return onMenuItemClick(item);
+                        }
+                    }
+
+                });
+                popup.show();
+            }
+        });
         return v;
+    }
+
+    public void message(String msg){
+        Toast.makeText(context,msg,Toast.LENGTH_SHORT).show();
     }
 }

@@ -70,7 +70,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_staff_approve) {
 
         } else if (id == R.id.nav_staff_bal) {
-
+            Intent intent = new Intent(this, StaffBalance.class);
+            startActivity(intent);
         } else if (id == R.id.nav_staff_reports) {
 
         }else if (id== R.id.nav_register){

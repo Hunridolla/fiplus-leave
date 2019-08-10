@@ -25,6 +25,5 @@ public class StaffRequest extends AppCompatActivity {
 
         final StaffRequestAdapter staffRequestAdapter = new StaffRequestAdapter(this, staffRequestModelArrayList);
         gridView.setAdapter(staffRequestAdapter);
-
     }
 }
