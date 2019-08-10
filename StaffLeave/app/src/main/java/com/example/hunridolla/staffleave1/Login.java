@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class login extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class login extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void intent_register(View view){
-        Intent intent = new Intent(this,register.class);
+        Intent intent = new Intent(this, Register.class);
         startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
 
     }

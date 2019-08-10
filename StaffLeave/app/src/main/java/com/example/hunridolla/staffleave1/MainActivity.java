@@ -65,7 +65,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_staff_info) {
 
         } else if (id == R.id.nav_staff_request) {
-
+            Intent intent = new Intent(this, StaffRequest.class);
+            startActivity(intent);
         } else if (id == R.id.nav_staff_approve) {
 
         } else if (id == R.id.nav_staff_bal) {
@@ -73,11 +74,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_staff_reports) {
 
         }else if (id== R.id.nav_register){
-            Intent intent = new Intent(this,register.class);
+            Intent intent = new Intent(this, Register.class);
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
 
         }else if (id== R.id.nav_sign_out){
-            Intent intent = new Intent(this,login.class);
+            Intent intent = new Intent(this, Login.class);
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
 
     }

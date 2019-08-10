@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF"
-    tools:context="com.example.hunridolla.staffleave1.register">
+    tools:context="com.example.hunridolla.staffleave1.Register">
 
     <ImageView
         android:id="@+id/top_img"
