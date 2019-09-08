@@ -63,7 +63,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_staff_info) {
-
+            Intent intent = new Intent(this, StaffInformation.class);
+            startActivity(intent);
         } else if (id == R.id.nav_staff_request) {
             Intent intent = new Intent(this, StaffRequest.class);
             startActivity(intent);
